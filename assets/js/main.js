@@ -143,7 +143,8 @@ scenes.forEach((s, i) =>
 );
 
 const root = document.documentElement;
-const reduce = matchMedia("(prefers-reduced-motion:reduce)").matches;
+const reduce = false;
+// const reduce = matchMedia("(prefers-reduced-motion:reduce)").matches;
 let started = false,
   scrolled = false,
   ticking = false;
