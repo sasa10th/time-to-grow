@@ -1215,7 +1215,7 @@ footer svg {
   outline: 2px solid #ffffff;
   outline-offset: 3px;
 }
-@media (prefers-reduced-motion: reduce) {
+/* @media (prefers-reduced-motion: reduce) {
   *:not(#opening):not(#opening *):not(#sec_1):not(#sec_1 *) {
     transition-duration: 0.01s !important;
     transition-delay: 0s !important;
@@ -1228,4 +1228,4 @@ footer svg {
   html {
     scroll-behavior: auto;
   }
-}
+} */
