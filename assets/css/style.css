@@ -1216,11 +1216,14 @@ footer svg {
   outline-offset: 3px;
 }
 @media (prefers-reduced-motion: reduce) {
-  * {
+  *:not(#opening):not(#opening *):not(#sec_1):not(#sec_1 *) {
     transition-duration: 0.01s !important;
     transition-delay: 0s !important;
     animation-duration: 0.01s !important;
     animation-delay: 0s !important;
+  }
+  .scroll-cue i {
+    animation: none;
   }
   html {
     scroll-behavior: auto;
