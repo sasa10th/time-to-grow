@@ -164,14 +164,14 @@ function begin() {
   started = true;
   root.classList.add("start");
   scrollTo(0, 0);
-  setTimeout(() => root.classList.add("opening_delay"), reduce ? 0 : 3300);
+  setTimeout(() => root.classList.add("opening_delay"), 3300);
   setTimeout(() => {
     update();
     addEventListener("scroll", onScroll, { passive: true });
   }, 600);
 }
-if (document.readyState === "complete") setTimeout(begin, reduce ? 0 : 1300);
-else addEventListener("load", () => setTimeout(begin, reduce ? 0 : 1300));
+if (document.readyState === "complete") setTimeout(begin, 1300);
+else addEventListener("load", () => setTimeout(begin, 1300));
 // failsafe: never leave the page blank if the load event is delayed (slow font/network)
 setTimeout(begin, 6000);
 
