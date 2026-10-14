@@ -40,7 +40,8 @@ adult-time/
 │   │   ├── ShillaCulture-Bold.ttf
 │   │   └── ShillaCulture-Medium.ttf
 │   ├── img/
-│   │   └── favicon.svg
+│   │   ├── favicon.svg
+│   │   └── og-image.png
 │   └── js/
 │       └── main.js
 └── README.md
