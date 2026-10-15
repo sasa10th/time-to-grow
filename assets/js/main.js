@@ -166,6 +166,7 @@ function begin() {
   root.classList.add("start");
   scrollTo(0, 0);
   setTimeout(() => root.classList.add("opening_delay"), 3300);
+  setTimeout(() => root.classList.add("scroll_ready"), 6800);
   setTimeout(() => {
     update();
     addEventListener("scroll", onScroll, { passive: true });
@@ -173,7 +174,7 @@ function begin() {
 }
 if (document.readyState === "complete") setTimeout(begin, 1300);
 else addEventListener("load", () => setTimeout(begin, 1300));
-// failsafe: never leave the page blank if the load event is delayed (slow font/network)
+// failsafe
 setTimeout(begin, 6000);
 
 const layers = [...cover.children],
