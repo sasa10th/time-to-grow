@@ -224,6 +224,7 @@ const s3 = document.getElementById("sec_3"),
     target: 0,
   })),
   navItems = [...document.querySelectorAll("#siteNav a")]
+    .filter((link) => link.getAttribute("href").startsWith("#"))
     .map((link) => ({
       link,
       section: document.querySelector(link.getAttribute("href")),
