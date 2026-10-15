@@ -36,7 +36,8 @@ html {
   font-size: 62.5%;
   color: var(--ink);
   background: var(--paper);
-  overflow: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
@@ -44,9 +45,10 @@ html {
   padding-bottom: env(safe-area-inset-bottom, 0px);
   scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 56px);
 }
-html.start {
-  overflow-y: scroll;
-  overflow-x: hidden;
+html:not(.scroll_ready) body {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
 }
 body {
   font:
@@ -299,7 +301,7 @@ html.start #bodyContainer {
     opacity: 1;
   }
 }
-/* hero */
+/* sec_1 */
 #sec_1 {
   padding-bottom: clamp(100px, 18vw, 200px);
 }
@@ -307,7 +309,7 @@ html.start #bodyContainer {
   max-width: none;
   padding-top: clamp(64px, 7vw, 70px);
 }
-/* ===== HERO ===== */
+/* hero */
 .hero {
   max-width: 1080px;
   margin: 0 auto;
@@ -350,8 +352,11 @@ html.start #bodyContainer {
 }
 .start .scroll-cue {
   opacity: 0.7;
-  pointer-events: auto;
+  pointer-events: none;
   transition: opacity 1s 5.8s;
+}
+html.scroll_ready:not(.scroll_start) .scroll-cue {
+  pointer-events: auto;
 }
 .scroll_start .scroll-cue {
   opacity: 0;
@@ -391,7 +396,6 @@ html.start #bodyContainer {
   background: var(--c);
   flex: none;
 }
-/* ===== /HERO ===== */
 .wrap-hd {
   position: absolute;
   z-index: 10;
@@ -477,7 +481,7 @@ html.start #bodyContainer {
   opacity: 0;
   will-change: transform;
 }
-/* film frame: sprocket-hole strips (overlay only) */
+/* film frame */
 .jkt::before {
   content: "";
   position: absolute;
@@ -907,13 +911,13 @@ footer svg {
   margin: 0 auto 20px;
   display: block;
 }
-/* ---------- tablet & below ---------- */
+/* tablet & below */
 @media (max-width: 1024px) {
   .jkt {
     min-height: 360px;
   }
 }
-/* ---------- mobile ---------- */
+/* mobile */
 @media (max-width: 800px) {
   #headerMenu {
     position: fixed;
