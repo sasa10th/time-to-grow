@@ -1301,8 +1301,20 @@ footer .footer-review-link:focus-visible {
     linear-gradient(var(--scrim), var(--scrim)),
     var(--grain) 0 0 / 256px 256px repeat,
     var(--plate) center / cover fixed no-repeat;
-  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 var(--edge), #000 calc(100% - var(--edge)), transparent);
-  mask-image: linear-gradient(to bottom, transparent, #000 var(--edge), #000 calc(100% - var(--edge)), transparent);
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    #000 var(--edge),
+    #000 calc(100% - var(--edge)),
+    transparent
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    #000 var(--edge),
+    #000 calc(100% - var(--edge)),
+    transparent
+  );
 }
 /* iOS ignores fixed attachment */
 @supports (-webkit-touch-callout: none) {
@@ -1334,7 +1346,17 @@ footer .footer-review-link:focus-visible {
   top: 0;
   bottom: calc(-1 * clamp(100px, 18vw, 200px));
   pointer-events: none;
-  background: var(--grain) 0 0 / 256px 256px repeat, url("../img/bg/bg-sky.webp") center / cover fixed no-repeat;
-  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - var(--edge)), transparent);
-  mask-image: linear-gradient(to bottom, #000 calc(100% - var(--edge)), transparent);
+  background:
+    var(--grain) 0 0 / 256px 256px repeat,
+    url("../img/bg/bg-sky.webp") center / cover fixed no-repeat;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 calc(100% - var(--edge)),
+    transparent
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    #000 calc(100% - var(--edge)),
+    transparent
+  );
 }
