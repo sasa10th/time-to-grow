@@ -233,6 +233,21 @@ html.start #bodyContainer {
 #headerMenu nav a[aria-current="location"] {
   font-weight: 700;
 }
+#headerMenu nav .review-link {
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 999px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+#headerMenu nav .review-link::after {
+  content: none;
+}
+#headerMenu nav .review-link:hover {
+  background: #ffffff;
+  color: #000000;
+  opacity: 1;
+}
 #headerMenu a:hover {
   opacity: 0.78;
 }
@@ -911,6 +926,28 @@ footer svg {
   margin: 0 auto 20px;
   display: block;
 }
+footer .footer-review-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  padding: 11px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 999px;
+  font-size: 1.4rem;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    opacity 0.2s;
+}
+footer .footer-review-link:hover,
+footer .footer-review-link:focus-visible {
+  background: #ffffff;
+  color: #000000;
+  opacity: 1;
+}
 /* tablet & below */
 @media (max-width: 1024px) {
   .jkt {
@@ -1002,6 +1039,13 @@ footer svg {
     color: #ffffff;
     opacity: 0.72;
     margin-right: 10px;
+  }
+  #headerMenu .review-nav-item::before {
+    content: none;
+  }
+  #headerMenu nav .review-link {
+    padding: 10px 16px;
+    border-color: rgba(255, 255, 255, 0.72);
   }
   .headerShow #headerMenu {
     height: auto;
