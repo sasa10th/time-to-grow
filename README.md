@@ -40,6 +40,12 @@ adult-time/
 │   │   ├── ShillaCulture-Bold.ttf
 │   │   └── ShillaCulture-Medium.ttf
 │   ├── img/
+│   │   ├── bg/
+│   │   │   ├── bg-sky.webp
+│   │   │   ├── bg-canopy.webp
+│   │   │   ├── bg-hills.webp
+│   │   │   ├── bg-field.webp
+│   │   │   └── grain.webp
 │   │   ├── favicon.svg
 │   │   └── og-image.png
 │   └── js/
